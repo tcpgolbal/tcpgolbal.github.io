@@ -26,6 +26,7 @@ TCP314赋能TCP融合生态让TCP与TCP314更有价值。
 腾讯会议号：191-841-072
 会议时间：2024/06/05---20:00-21:30
 会议链接：https://meeting.tencent.com/dm/167iRwBdYPgm
+现有社区用户恶意扰乱TCP生态发展，证明我们官方真实性，V2 TCP合约停止转账交易一天，直到腾讯会议结束后开放
 
 TCP社区成员相互转告
 
@@ -39,19 +40,19 @@ TCP社区成员相互转告
         function alert() {
             var today = new Date().toISOString().split('T')[0]; // 获取当前日期
             var lastPopupDate = localStorage.getItem('lastPopupDate');
-            var popupCount = parseInt(localStorage.getItem('popupCount1')) || 0;
+            var popupCount = parseInt(localStorage.getItem('popupCount2')) || 0;
 
             // 检查日期是否改变，如果改变则重置计数器
             if (lastPopupDate !== today) {
                 popupCount = 0;
-                localStorage.setItem('popupCount1', 0);
+                localStorage.setItem('popupCount2', 0);
                 localStorage.setItem('lastPopupDate', today);
             }
 
             // 如果弹窗次数少于3次，则显示弹窗并增加计数
             if (popupCount < 3) {
                 confirmRedirect();
-                localStorage.setItem('popupCount1', popupCount + 1);
+                localStorage.setItem('popupCount2', popupCount + 1);
             }
         };
         window.onload = function(){
