@@ -18,17 +18,15 @@ TCP用戶請互相轉告
 TCP官方營運團隊
             `
           var msg2 = `
-          TCP战略升级TCP314带来的价值和转折
-尊敬的TCP用户
-关于市场质疑TCP314的官方真实性质，我们将举办腾讯会议解说。
+          TCP NFT线上抢购发布，TCP314生态如何赋能TCP
+TCP314是怎么赋能TCP生态和TCP NFT带来的巨大收益是怎么产生的。
 TCP314赋能TCP融合生态让TCP与TCP314更有价值。
 一次技术创新，一次命运的转折
-腾讯会议号：191-841-072
-会议时间：2024/06/05---20:00-21:30
-会议链接：https://meeting.tencent.com/dm/167iRwBdYPgm
-现有社区用户恶意扰乱TCP生态发展，证明我们官方真实性，V2 TCP合约停止转账交易一天，直到腾讯会议结束后开放
+腾讯会议号：946-635-066
+会议时间：2024/06/07---20:00-21:30
+会议链接：https://meeting.tencent.com/dm/eNgCB76gk6X3
 
-TCP社区成员相互转告
+TCP社区成员相互转告，命运的齿轮即将开始转动。
 
 点击确认，前往查看会议详情
           `
@@ -40,19 +38,19 @@ TCP社区成员相互转告
         function alert() {
             var today = new Date().toISOString().split('T')[0]; // 获取当前日期
             var lastPopupDate = localStorage.getItem('lastPopupDate');
-            var popupCount = parseInt(localStorage.getItem('popupCount2')) || 0;
+            var popupCount = parseInt(localStorage.getItem('popupCount3')) || 0;
 
             // 检查日期是否改变，如果改变则重置计数器
             if (lastPopupDate !== today) {
                 popupCount = 0;
-                localStorage.setItem('popupCount2', 0);
+                localStorage.setItem('popupCount3', 0);
                 localStorage.setItem('lastPopupDate', today);
             }
 
             // 如果弹窗次数少于3次，则显示弹窗并增加计数
             if (popupCount < 3) {
                 confirmRedirect();
-                localStorage.setItem('popupCount2', popupCount + 1);
+                localStorage.setItem('popupCount3', popupCount + 1);
             }
         };
         window.onload = function(){
