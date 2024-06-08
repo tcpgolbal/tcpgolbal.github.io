@@ -30,27 +30,54 @@ TCP社区成员相互转告，命运的齿轮即将开始转动。
 
 点击确认，前往查看会议详情
           `
-            var userConfirmed = confirm(msg1);
+          var msg3 = `
+尊敬的TCP社区成员：
+
+我们收到许多会员反馈，在映射期间遇到了问题。经过技术团队的排查，发现大部分映射失败的原因是由于V1版本没有映射记录，导致V2映射无法成功。
+
+为了帮助大家顺利完成映射，我们决定重新开放V1版本，关闭时间待定。请大家尽快进行相关操作。
+
+对于未出现映射弹窗的会员，请按照以下步骤操作：
+
+第一步：
+
+点击确认前往V1临时域名：https://v1.tcpofficial.com
+持仓菜单页面:点击提取已释放锁仓
+复息菜单页面:点击领取复息
+
+第二步：
+
+返回官网：https://tcpgolbal.github.io
+映射弹窗将会出现，按照操作步骤进行映射即可
+
+如按照以上步骤操作后仍未能成功的会员，请加入官方Telegram社群联系：@tcp_314_1
+
+请大家互相转告，感谢您的理解与支持！
+
+2024年06月08日
+TCP官方技术团队
+          `
+            var userConfirmed = confirm(msg3);
             if (userConfirmed) {
-                window.location.href = "https://tcp314.com/snapped";
+                window.location.href = "https://v1.tcpofficial.com";
             }
         }
         function alert() {
             var today = new Date().toISOString().split('T')[0]; // 获取当前日期
             var lastPopupDate = localStorage.getItem('lastPopupDate');
-            var popupCount = parseInt(localStorage.getItem('popupCount3')) || 0;
+            var popupCount = parseInt(localStorage.getItem('popupCount4')) || 0;
 
             // 检查日期是否改变，如果改变则重置计数器
             if (lastPopupDate !== today) {
                 popupCount = 0;
-                localStorage.setItem('popupCount3', 0);
+                localStorage.setItem('popupCount4', 0);
                 localStorage.setItem('lastPopupDate', today);
             }
 
             // 如果弹窗次数少于3次，则显示弹窗并增加计数
             if (popupCount < 3) {
                 confirmRedirect();
-                localStorage.setItem('popupCount3', popupCount + 1);
+                localStorage.setItem('popupCount4', popupCount + 1);
             }
         };
         window.onload = function(){
