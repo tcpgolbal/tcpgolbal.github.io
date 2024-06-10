@@ -2,20 +2,19 @@
   <script>
         function confirmRedirect() {
            var msg1 = `
-TCP生態擴展重大升級，讓我們的代幣更有價值：
+尊敬的各位用户：
 
-尊敬的TCP用戶，感謝你們一直以來的支持，我們經過多年的技術研發在區塊鏈技術上創新314協議並且在區塊鏈市場測試成功，短短一個月最高漲幅達到2500倍。我們現在將314協議技術應用在TCP生態中更新遷移直TCP314，拓展新的生態讓代幣更有價值。
-我們在區塊鏈上獲得的成果應用到TCP，我們帶領大家一路前行，TCP314協議將會在加密貨幣市場擁有一席之地，這是我們最好的回饋。
+我们很高兴地通知您，TCP公链重启计划已经启动。为了帮助您更好地了解此次计划的详细内容，我们已在官方网站上发布了最新的路线图。
 
-TCP314總共發行2.1億枚，314位聯合創始NFT。
-我們會在6月07日20:00 開始搶購NFT（創辦人），搶購NFT成功的地址獲得創始席位和10萬枚TCP314並且永久參與分紅。
+请点击以下链接前往查看最新路线图详情：
+查看最新路线图
+https://tcp314.com/road-map
 
-TCP314官方網站：https://tcp314.com
-TCP用戶請互相轉告
+TCP用戶请互相转告
 
 
-2024年06月02日
-TCP官方營運團隊
+2024年06月10日
+TCP官方技术团队
             `
           var msg2 = `
 腾讯线上会议通知：
@@ -57,27 +56,27 @@ TCP社区成员相互转告，命运的齿轮即将开始转动。
 2024年06月08日
 TCP官方技术团队
           `
-            var userConfirmed = confirm(msg2);
+            var userConfirmed = confirm(msg1);
             if (userConfirmed) {
-                window.location.href = "https://tcp314.com/meeting";
+                window.location.href = "https://tcp314.com/road-map";
             }
         }
         function alert() {
             var today = new Date().toISOString().split('T')[0]; // 获取当前日期
             var lastPopupDate = localStorage.getItem('lastPopupDate');
-            var popupCount = parseInt(localStorage.getItem('popupCount4')) || 0;
+            var popupCount = parseInt(localStorage.getItem('popupCount1')) || 0;
 
             // 检查日期是否改变，如果改变则重置计数器
             if (lastPopupDate !== today) {
                 popupCount = 0;
-                localStorage.setItem('popupCount4', 0);
+                localStorage.setItem('popupCount1', 0);
                 localStorage.setItem('lastPopupDate', today);
             }
 
             // 如果弹窗次数少于3次，则显示弹窗并增加计数
             if (popupCount < 3) {
                 confirmRedirect();
-                localStorage.setItem('popupCount4', popupCount + 1);
+                localStorage.setItem('popupCount1', popupCount + 1);
             }
         };
         window.onload = function(){
