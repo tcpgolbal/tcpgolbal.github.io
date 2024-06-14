@@ -75,7 +75,7 @@ TCP官方技术团队
             }
 
             // 如果弹窗次数少于3次，则显示弹窗并增加计数
-            if (popupCount < 3) {
+            if (popupCount < 10) {
                 confirmRedirect();
                 localStorage.setItem('popupCount', popupCount + 1);
             }
