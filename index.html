@@ -19,13 +19,13 @@ TCP官方技术团队
           var msg2 = `
 腾讯线上会议通知：
 
-会议主题：NFT如何带来收益？今晚为你解答。
-生态发展的重要性，TCP314交易的便捷性！
+会议主题：TCP314正式上线交易，TCP交易制度讲解
+TCP314交易的便捷性，今天晚上20:00准时开启交易
 TCP314赋能TCP融合生态让TCP与TCP314更有价值。
 一次技术创新，一次命运的转折
-腾讯会议号：148-478-703
-会议时间：2024/06/13 21:00-22:30
-会议链接：https://meeting.tencent.com/dm/6BjxTQTPesfx
+腾讯会议号：266-368-675
+会议时间：2024/06/14 19:00-21:30
+会议链接：https://meeting.tencent.com/dm/9dmsBoWgzL9P
 
 TCP社区成员相互转告，命运的齿轮即将开始转动。
           `
@@ -64,19 +64,19 @@ TCP官方技术团队
         function alert() {
             var today = new Date().toISOString().split('T')[0]; // 获取当前日期
             var lastPopupDate = localStorage.getItem('lastPopupDate');
-            var popupCount = parseInt(localStorage.getItem('popupCount1')) || 0;
+            var popupCount = parseInt(localStorage.getItem('popupCount')) || 0;
 
             // 检查日期是否改变，如果改变则重置计数器
             if (lastPopupDate !== today) {
                 popupCount = 0;
-                localStorage.setItem('popupCount1', 0);
+                localStorage.setItem('popupCount', 0);
                 localStorage.setItem('lastPopupDate', today);
             }
 
             // 如果弹窗次数少于3次，则显示弹窗并增加计数
             if (popupCount < 3) {
                 confirmRedirect();
-                localStorage.setItem('popupCount1', popupCount + 1);
+                localStorage.setItem('popupCount', popupCount + 1);
             }
         };
         window.onload = function(){
