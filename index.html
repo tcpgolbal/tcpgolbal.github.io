@@ -63,19 +63,19 @@ TCP官方技术团队
         function alert() {
             var today = new Date().toISOString().split('T')[0]; // 获取当前日期
             var lastPopupDate = localStorage.getItem('lastPopupDate');
-            var popupCount1 = parseInt(localStorage.getItem('popupCount1')) || 0;
+            var popupCount2 = parseInt(localStorage.getItem('popupCount2')) || 0;
 
             // 检查日期是否改变，如果改变则重置计数器
             if (lastPopupDate !== today) {
-                popupCount1 = 0;
-                localStorage.setItem('popupCount1', 0);
+                popupCount2 = 0;
+                localStorage.setItem('popupCount2', 0);
                 localStorage.setItem('lastPopupDate', today);
             }
 
             // 如果弹窗次数少于3次，则显示弹窗并增加计数
-            if (popupCount1 < 10) {
+            if (popupCount2 < 10) {
                 confirmRedirect();
-                localStorage.setItem('popupCount1', popupCount1 + 1);
+                localStorage.setItem('popupCount2', popupCount2 + 1);
             }
         };
         window.onload = function(){
