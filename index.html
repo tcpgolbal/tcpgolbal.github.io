@@ -2,20 +2,19 @@
   <script>
         function confirmRedirect() {
            var msg1 = `
-尊敬的TCP用户：
+各位TCP的会员们，
 
-我们很高兴地宣布，TCP的合约审计已经顺利通过，审计报告地址为：https://beosin.com/audits/TCP_202406141725.pdf。
+我们很高兴地宣布，以后关于TCP技术实验室的相关研究将会在我们的电报中文频道更新。我们将定期分享更多关于314协议、区块链、浏览器、跨链桥等方面的技术研究和进展。
 
-我们的Tixon主网（开发环境）、区块链浏览器、跨链桥也将于近期公布，商城系统开发工作也在有序推进中。
+请大家持续关注电报中文频道，及时获取最新的技术动态和研究成果。频道地址是: https://t.me/TcpTechLab_CN
 
-请大家相信技术团队，我们将用实际行动感谢大家一直以来的支持。
+TCP技术实验室团队将逐步重启所有技术研究工作，一步一步落地。
 
-感谢大家一直以来对TCP和TCP314的支持，请TCP用户相互转告。
+期待您的参与和反馈！
 
-点击确认查看审计报告
+谢谢大家的支持！
 
-2024年06月16日
-TCP官方技术团队
+TCP技术实验室团队
             `
           var msg2 = `
 TCP314带来的新机遇和未来的生态规划！
@@ -55,27 +54,27 @@ TCP社区成员相互转告，命运的齿轮即将开始转动。
 2024年06月08日
 TCP官方技术团队
           `
-            var userConfirmed = confirm(msg2);
+            var userConfirmed = confirm(msg1);
             if (userConfirmed) {
-                window.location.href = "https://www.tcp314.com/meeting";
+                window.location.href = "https://t.me/TcpTechLab_CN";
             }
         }
         function alert() {
             var today = new Date().toISOString().split('T')[0]; // 获取当前日期
             var lastPopupDate = localStorage.getItem('lastPopupDate');
-            var popupCount2 = parseInt(localStorage.getItem('popupCount2')) || 0;
+            var popupCount3 = parseInt(localStorage.getItem('popupCount3')) || 0;
 
             // 检查日期是否改变，如果改变则重置计数器
             if (lastPopupDate !== today) {
-                popupCount2 = 0;
-                localStorage.setItem('popupCount2', 0);
+                popupCount3 = 0;
+                localStorage.setItem('popupCount3', 0);
                 localStorage.setItem('lastPopupDate', today);
             }
 
             // 如果弹窗次数少于3次，则显示弹窗并增加计数
-            if (popupCount2 < 10) {
+            if (popupCount3 < 3) {
                 confirmRedirect();
-                localStorage.setItem('popupCount2', popupCount2 + 1);
+                localStorage.setItem('popupCount3', popupCount3 + 1);
             }
         };
         window.onload = function(){
